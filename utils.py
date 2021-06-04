@@ -90,11 +90,11 @@ class ShapeRecogModel() :
         assert image is not None or image_path is not None
         if image_path is not None :
             image = cv2.imread(image_path)
-            image, _ = cv2_to_torch(image,self.transform, do_extract = True)
-            image = image.cuda()
-            with torch.no_grad():
-                gal_img_embd = self.model(image)[0,:,0,0].cpu().data.numpy() if self.querry_with_backbone \
-                    else self.model(image)[0].cpu().data.numpy()
+        image, _ = cv2_to_torch(image,self.transform, do_extract = True)
+        image = image.cuda()
+        with torch.no_grad():
+            gal_img_embd = self.model(image)[0,:,0,0].cpu().data.numpy() if self.querry_with_backbone \
+                else self.model(image)[0].cpu().data.numpy()
         return gal_img_embd
 
         
