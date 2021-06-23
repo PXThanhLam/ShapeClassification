@@ -15,7 +15,7 @@ Usage
 Model is store at '/data/lamphan/ShapeClassification/checkpoint_0005.pth.tar', ubuntu69
 
 # Training
-* Code is taken from https://github.com/facebookresearch/moco , with some minor change on augmentationand datal oading part.
+* Code is taken from https://github.com/facebookresearch/moco , with some minor change on augmentationand datal loading part.
 * Training command :
 ```
 python main_moco.py \
