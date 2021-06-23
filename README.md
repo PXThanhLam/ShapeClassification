@@ -25,4 +25,4 @@ python main_moco.py \
   --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 --mlp --moco-t 0.2 --aug-plus --cos \
   [your imagenet-folder with train and val folders]
 ```
-
+* Please follow the guild in https://github.com/facebookresearch/moco to set your config, compatiple with your resource
